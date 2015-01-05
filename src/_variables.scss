@@ -3,126 +3,218 @@
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
  */
 
-// Footnotes spacing
-$spacing: .375em;
-$ddRtnWidth: 3.375em;
-
-// Colours
-$clrWhite: #fff;
-$clrLight: #eee;
-$clrMedium: #ccc;
-$clrDark: #555;
-$gray-light: #767676;
-
-// Calendar colours
-$cal-text-head: #fff;
-$cal-text-body: #000;
-$cal-dark: #333;
-$cal-medium: #555;
-$cal-active: #ccc;
-$cal-days-link: #111;
-
-//Multimedia player colours
-$mm-progress-fg-color: #176ca7;
-$mm-progress-bg-color: #fff;
-$mm-cc-fg-color: #fff;
-$mm-cc-bg-color: #000;
-$mm-ctrl-fg-color: #fff;
-$mm-ctrl-bg-color: #3e3e3e;
-$mm-ctrl-outline-color: #4aafff;
-$mm-ctrl-cc-color: #4aafff;
-$mm-volume-bg-color: #aaa;
-$mm-volume-thumb-color: #fff;
-
-// Font scales
-$font-scale-xxxl: 2.125;
-$font-scale-xxl: 1.625;
-$font-scale-xl: 1.375;
-$font-scale-lg: 1.125;
-$font-scale-sm: 0.875;
-
-// Overrides for Bootstrap font sizes
-$font-size-base: 16px;
-$font-size-large: ceil($font-size-base * $font-scale-lg);
-$font-size-small: ceil($font-size-base * $font-scale-sm);
-
-$font-size-h1: ceil($font-size-base * $font-scale-xxxl);
-$font-size-h2: ceil($font-size-base * $font-scale-xxl);
-$font-size-h3: ceil($font-size-base * $font-scale-xl);
-$font-size-h4: ceil($font-size-base * $font-scale-lg);
-$font-size-h6: ceil($font-size-base * $font-scale-sm);
-
-// 20/14 -> 23/16 on the basis of ceil((20/14)*16) = 23
-$line-height-base: 1.4375;
-
-$brand-primary: #2572b4;
-$brand-success: #1b6c1c;
-$brand-info: #4d4d4d;
-$brand-warning: #f2d40d;
-$brand-danger: #bc3331;
-
-$link-color: #295376;
-$link-hover-color: #0535d2;
-$link-visited-color: #7834bc;
-
-$table-bg-accent: #f5f5f5;
-$table-bg-hover: #f0f0f0;
-
-$btn-default-color: #335075;
-$btn-default-bg: #eaebed;
-$btn-default-border: darken($btn-default-bg, 5%);
-
-$btn-primary-bg: $brand-primary;
-$btn-primary-border: darken($btn-primary-bg, 20%);
-
-$btn-success-bg: $brand-success;
-$btn-success-border: darken($btn-success-bg, 20%);
-
-$btn-info-bg: $brand-info;
-$btn-info-border: darken($btn-info-bg, 20%);
-
-$btn-warning-color: #000;
-$btn-warning-bg: $brand-warning;
-$btn-warning-border: darken($btn-warning-bg, 20%);
-
-$btn-danger-bg: $brand-danger;
-$btn-danger-border: darken($btn-danger-bg, 20%);
-
-$pagination-color: $btn-default-color;
-$pagination-bg: $btn-default-bg;
-$pagination-border: $btn-default-border;
-
-$pagination-hover-color: $btn-default-color;
-$pagination-hover-bg: darken($btn-default-bg, 8%);
-$pagination-hover-border: darken($btn-default-border, 12%);
-
-$pager-border-radius: 4px;
-
-// Hack for Bootstrap 3.1.1, since it doesn't convert the "fadein" LESS method.
-// Pending fix release in https://github.com/twbs/bootstrap-sass/commit/df7be4f0412497e22f1d271d94d6e9835f61113e
-@function fadein($colour, $pct) {
-	@return opacify($colour, $pct / 100);
-}
-
-// Override Bootstrap's expected font path.
-// This is a path relative to the final CSS destination and not the current file
-$icon-font-path: "../fonts/";
+/*
+ * HOW TO USE THIS FILE
+ * Use this file to override Bootstrap variables and WET custom variables.
+ * If there is a Bootstrap variable not shown here that you want to override, go to "../lib/bootstrap-sass-official/assets/stylesheets/bootstrap/variables" to view the variables that you can override. Simply copy and paste the variable and its applicable section (if applicable) from the Bootstrap file into this override file and override the variables as applicable.
+ */
 
 // Import Bootstrap variables for viewport sizes
 @import "../lib/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
 
+// Hack for Bootstrap 3.1.1, since it doesn't convert the "fadein" LESS method.
+// Pending fix release in https://github.com/twbs/bootstrap-sass/commit/df7be4f0412497e22f1d271d94d6e9835f61113e
+@function fadein($colour, $pct) {
+  @return opacify($colour, $pct / 100);
+}
+
+
+//
+// BOOTSTRAP VARIABLES
+//
+
+//== Colours
+//
+//## Gray and brand colors for use across the application.
+
+// Bootstrap Overrides
+$gray-light:              #767676;
+
+$brand-primary:           #2572b4;
+$brand-success:           #1b6c1c;
+$brand-info:              #4d4d4d;
+$brand-warning:           #f2d40d;
+$brand-danger:            #bc3331;
+
+// WET Custom
+$clrWhite:                #fff;
+$clrLight:                #eee;
+$clrMedium:               #ccc;
+$clrDark:                 #555;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Global textual link color.
+// Boostrap Overrides
+$link-color:              #295376;
+$link-hover-color:        #0535d2;
+
+// WET Custom
+$link-visited-color:      #7834bc;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+// WET Custom font scales
+$font-scale-xxxl:         2.125;
+$font-scale-xxl:          1.625;
+$font-scale-xl:           1.375;
+$font-scale-lg:           1.125;
+$font-scale-sm:           0.875;
+
+// Bootstrap Overrides
+$font-size-base:          16px;
+$font-size-large:         ceil($font-size-base * $font-scale-lg);
+$font-size-small:         ceil($font-size-base * $font-scale-sm);
+
+$font-size-h1:            ceil($font-size-base * $font-scale-xxxl);
+$font-size-h2:            ceil($font-size-base * $font-scale-xxl);
+$font-size-h3:            ceil($font-size-base * $font-scale-xl);
+$font-size-h4:            ceil($font-size-base * $font-scale-lg);
+$font-size-h6:            ceil($font-size-base * $font-scale-sm);
+
+//** Unit-less `line-height` for use in components like buttons.
+// 20/14 -> 23/16 on the basis of ceil((20/14)*16) = 23
+$line-height-base:        1.4375;
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included icon font.
+//** Load fonts from this directory.
+
+// Boostrap Overrides
+// This is a path relative to the final CSS destination and not the current file
+$icon-font-path:          "../fonts/";
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+// Bootstrap Overrides
+//** Background color used for `.table-striped`.
+$table-bg-accent:         #f5f5f5;
+//** Background color used for `.table-hover`.
+$table-bg-hover:          #f0f0f0;
+
+
+//== Buttons
+//
+//## For each of buttons, define text, background and border color.
+
+// Bootstrap Overrides
+$btn-default-color:       #335075;
+$btn-default-bg:          #eaebed;
+$btn-default-border:      darken($btn-default-bg, 5%);
+
+$btn-primary-border:      darken($btn-primary-bg, 20%);
+
+$btn-success-border:      darken($btn-success-bg, 20%);
+
+$btn-info-border:         darken($btn-info-bg, 20%);
+
+$btn-warning-color:       #000;
+$btn-warning-border:      darken($btn-warning-bg, 20%);
+
+$btn-danger-border:       darken($btn-danger-bg, 20%);
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// WET Custom
 // Additional Viewports outside of Bootstrap definitions
 // @TODO: Remove camel case variables once themes are patched
-$screen-xxs-max: 479px;
-$xxSmallViewMax: $screen-xxs-max;
-$xSmallViewMin: $screen-xs-min;
-$xSmallViewMax: $screen-xs-max;
-$smallViewMin: $screen-sm-min;
-$smallViewMax: $screen-sm-max;
-$mediumViewMin: $screen-md-min;
-$mediumViewMax: $screen-md-min;
-$largeViewMin: $screen-lg-min;
-$screen-lg-max: 1599px;
-$largeViewMax: $screen-lg-max;
-$screen-xl-min: 1600px;
-$xLargeViewMin: $screen-xl-min;
+
+// Extra extra small screen
+$screen-xxs-max:          479px;
+$xxSmallViewMax:          $screen-xxs-max;
+
+// Extra small screen
+$xSmallViewMin:           $screen-xs-min;
+$xSmallViewMax:           $screen-xs-max;
+
+// Small screen
+$smallViewMin:            $screen-sm-min;
+$smallViewMax:            $screen-sm-max;
+
+// Medium screen
+$mediumViewMin:           $screen-md-min;
+$mediumViewMax:           $screen-md-min;
+
+// Large screen
+$largeViewMin:            $screen-lg-min;
+$screen-lg-max:           1599px;
+$largeViewMax:            $screen-lg-max;
+
+// Extra large screen
+$screen-xl-min:           1600px;
+$xLargeViewMin:           $screen-xl-min;
+
+
+//== Pagination
+//
+//##
+
+// Bootstrap Overrides
+$pagination-color:        $btn-default-color;
+$pagination-bg:           $btn-default-bg;
+$pagination-border:       $btn-default-border;
+
+$pagination-hover-color:  $btn-default-color;
+$pagination-hover-bg:     darken($btn-default-bg, 8%);
+$pagination-hover-border: darken($btn-default-border, 12%);
+
+// WET Custom
+$pager-border-radius:     4px;
+
+
+//
+// WET CUSTOM COMPONENTS VARIABLES
+//
+
+//== Calendar
+//
+//##
+
+$cal-text-head:           #fff;
+$cal-text-body:           #000;
+
+$cal-dark:                #333;
+$cal-medium:              #555;
+
+$cal-active:              #ccc;
+$cal-days-link:           #111;
+
+
+//== Multimedia player
+//
+//##
+
+$mm-progress-fg-color:    #176ca7;
+$mm-progress-bg-color:    #fff;
+
+$mm-cc-fg-color:          #fff;
+$mm-cc-bg-color:          #000;
+
+$mm-ctrl-fg-color:        #fff;
+$mm-ctrl-bg-color:        #3e3e3e;
+$mm-ctrl-outline-color:   #4aafff;
+$mm-ctrl-cc-color:        #4aafff;
+
+$mm-volume-bg-color:      #aaa;
+$mm-volume-thumb-color:   #fff;
+
+
+//== Footnotes
+//
+//##
+
+$spacing:                 .375em;
+$ddRtnWidth:              3.375em;
