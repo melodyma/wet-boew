@@ -208,12 +208,14 @@ $tablist-active-link-border-color: #666 !default;
 $tablist-active-link-border-style: solid !default;
 $tablist-active-link-border-width: 4px 0 0 0 !default;
 
-// Tablist at sm max && xxs max
-$tablist-screen-sm-details-border-color: $tablist-border-color !default;
-$tablist-screen-sm-details-border-style: solid !default;
-$tablist-screen-sm-details-border-width: 1px !default;
-$tablist-screen-sm-details-border-radius: 4px !default;
-
+// Tablist in small and extra small view
+$tablist-screen-sm-border-color: $tablist-border-color !default;
+$tablist-screen-sm-border-style: solid !default;
+$tablist-screen-sm-border-width: 1px !default;
+$tablist-screen-sm-border-radius: 4px;
+$tablist-screen-sm-seperator-border-color: $tablist-screen-sm-border-color !default;
+$tablist-screen-sm-seperator-border-style: $tablist-screen-sm-border-style !default;
+$tablist-screen-sm-seperator-border-width: $tablist-screen-sm-border-width !default;
 
 // Carousel
 $carousel-tablist-tabcount-color: #000 !default;
@@ -227,9 +229,9 @@ $carousel-s2-tablist-controls-bg-color: $clrLight !default;
 
 $carousel-s2-tablist-controls-color: $clrDarkBlue !default;
 
-$carousel-s2-tablist-controls-button-bg-color: #fff !default;
-$carousel-s2-tablist-controls-button-shadow: 0 0 4px $clrDarkBlue !default;
-$carousel-s2-tablist-controls-button-radius: 999px !default;
+$carousel-s2-tablist-controls-btn-bg-color: #fff !default;
+$carousel-s2-tablist-controls-btn-shadow: 0 0 4px $clrDarkBlue !default;
+$carousel-s2-tablist-controls-btn-radius: 999px !default;
 
 $carousel-s2-tablist-thumbnail-active-border-color: #666 !default;
 $carousel-s2-tablist-thumbnail-active-border-style: solid !default;

@@ -48,9 +48,13 @@
 }
 
 %carousel-s2-btn-common {
-	background: $carousel-s2-tablist-controls-button-bg-color;
-	border-radius: $carousel-s2-tablist-controls-button-radius;
-	box-shadow: $carousel-s2-tablist-controls-button-shadow;
+	background: $carousel-s2-tablist-controls-btn-bg-color;
+	border-radius: $carousel-s2-tablist-controls-btn-radius;
+	box-shadow: $carousel-s2-tablist-controls-btn-shadow;
+}
+
+%carousel-s2-btn-color {
+	color: $carousel-s2-tablist-controls-color;
 }
 
 %carousel-s2-prv-nxt-glyphicon-common {
@@ -305,7 +309,7 @@
 
 					a {
 						@extend %carousel-s2-prv-nxt-a-common;
-						color: $carousel-s2-tablist-controls-color;
+						@extend %carousel-s2-btn-color;
 						padding-left: 1em;
 
 						.glyphicon {
@@ -329,7 +333,7 @@
 
 					a {
 						@extend %carousel-s2-prv-nxt-a-common;
-						color: $carousel-s2-tablist-controls-color;
+						@extend %carousel-s2-btn-color;
 
 						.glyphicon {
 							@extend %carousel-s2-btn-common;
@@ -356,7 +360,7 @@
 
 					a {
 						@extend %carousel-s2-btn-common;
-						color: $carousel-s2-tablist-controls-color;
+						@extend %carousel-s2-btn-color;
 						font-size: 1.5em;
 						margin-top: 0.4em;
 						margin-right: 0.65em;
